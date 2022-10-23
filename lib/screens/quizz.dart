@@ -1,6 +1,4 @@
-import 'package:agriculture/screens/ressources-components/ressources_item_builder.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class QuizzScreen extends StatelessWidget {
   final theme = [

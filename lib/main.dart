@@ -1,4 +1,4 @@
-import 'package:agriculture/screens/start.dart';
+import 'package:agri_facile_fulfulde/screens/start.dart';
 import 'package:flutter/material.dart';
 
 void main() {

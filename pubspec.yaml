@@ -1,4 +1,4 @@
-name: agriculture
+name: agri_facile_fulfulde
 description: A new Flutter project.
 
 # The following line prevents the package from being accidentally published to
@@ -20,7 +20,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: '>=2.18.1 <3.0.0'
+  sdk: '>=2.18.2 <3.0.0'
 
 # Dependencies specify other packages that your package needs in order to work.
 # To automatically upgrade your package dependencies to the latest versions
@@ -35,7 +35,7 @@ dependencies:
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons:
+  cupertino_icons: ^1.0.2
   flutter_svg:
   youtube_player_flutter: 
   flutter_launcher_icons:
@@ -62,7 +62,6 @@ flutter_icons:
   image_path: assets/images/agri_logo.jpg
 
 
-
 # The following section is specific to Flutter packages.
 flutter:
 
@@ -76,7 +75,7 @@ flutter:
     - assets/images/
     - assets/icons/
     - assets/audios/
-
+    
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 

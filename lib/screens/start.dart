@@ -1,8 +1,8 @@
-import 'package:agriculture/screens/conseil.dart';
-import 'package:agriculture/screens/contact.dart';
-import 'package:agriculture/screens/quizz.dart';
-import 'package:agriculture/screens/ressources.dart';
-import 'package:agriculture/screens/suivi.dart';
+import 'package:agri_facile_fulfulde/screens/conseil.dart';
+import 'package:agri_facile_fulfulde/screens/contact.dart';
+import 'package:agri_facile_fulfulde/screens/quizz.dart';
+import 'package:agri_facile_fulfulde/screens/ressources.dart';
+import 'package:agri_facile_fulfulde/screens/suivi.dart';
 import 'package:flutter/material.dart';
 
 class MyHomePage extends StatelessWidget {
@@ -14,11 +14,11 @@ class MyHomePage extends StatelessWidget {
     ContactScreen(),
   ];
   final List<String> audiosMessage = [
-    'assets/audios/1.mp3',
-    'assets/audios/1.mp3',
-    'assets/audios/1.mp3',
-    'assets/audios/1.mp3',
-    'assets/audios/1.mp3',
+    'assets/audios/ressources_educatives.opus',
+    'assets/audios/suivi_activites.opus',
+    'assets/audios/conseil.opus',
+    'assets/audios/quizz.opus',
+    'assets/audios/conseiller.opus',
   ];
   @override
   Widget build(BuildContext context) {
@@ -144,6 +144,8 @@ class MyHomePage extends StatelessWidget {
       BuildContext context, IconData icon, title, Color color, Widget screen) {
     return InkWell(
       onTap: () {
+        final index = screens.indexWhere((item) => item == screen);
+        AudioPlayer().play(AssetSource(audiosMessage[index]));
         Navigator.push(
           context,
           MaterialPageRoute(builder: (context) => screen),

@@ -1,6 +1,4 @@
-import 'package:agriculture/screens/ressources_component_page_viewer/page_viewer.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class RessourcesItemBuilderScreen extends StatelessWidget {
   final String title;

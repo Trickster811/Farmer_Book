@@ -90,12 +90,12 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "com.example" "\0"
-            VALUE "FileDescription", "agriculture" "\0"
+            VALUE "FileDescription", "agri_facile_fulfulde" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "agriculture" "\0"
+            VALUE "InternalName", "agri_facile_fulfulde" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2022 com.example. All rights reserved." "\0"
-            VALUE "OriginalFilename", "agriculture.exe" "\0"
-            VALUE "ProductName", "agriculture" "\0"
+            VALUE "OriginalFilename", "agri_facile_fulfulde.exe" "\0"
+            VALUE "ProductName", "agri_facile_fulfulde" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

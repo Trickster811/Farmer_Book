@@ -1,12 +1,13 @@
-import 'package:agriculture/screens/ressources-components/ressources_item_builder.dart';
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class ContactScreen extends StatelessWidget {
   final List<String> audiosMessage = [
-    'assets/audios/1.mp3',
-    'assets/audios/1.mp3',
+    'assets/audios/appeler.opus',
+    'assets/audios/whatsapp.opus',
+    'assets/audios/sms.opus',
   ];
   @override
   Widget build(BuildContext context) {
@@ -61,17 +62,17 @@ class ContactScreen extends StatelessWidget {
                 height: 50,
               ),
               contactElementBuilder(
-                  context, 'Appeller', Icons.phone_in_talk_rounded,0),
+                  context, 'Appeller', Icons.phone_in_talk_rounded, 0),
               SizedBox(
                 height: 50,
               ),
               contactElementBuilder(
-                  context, 'Contacter via WhatsApp', Icons.whatsapp_rounded,1),
+                  context, 'Contacter via WhatsApp', Icons.whatsapp_rounded, 1),
               SizedBox(
                 height: 50,
               ),
               contactElementBuilder(
-                  context, 'Nous Ecrire', Icons.message_rounded,2)
+                  context, 'Nous Ecrire', Icons.message_rounded, 2)
             ],
           ),
         ),
@@ -83,7 +84,7 @@ class ContactScreen extends StatelessWidget {
       BuildContext context, String title, IconData icon, int index) {
     return InkWell(
       onTap: () {
-        
+        AudioPlayer().play(AssetSource(audiosMessage[index]));
         showCupertinoModalPopup(
           context: context,
           builder: (context) => CupertinoActionSheet(
@@ -104,7 +105,18 @@ class ContactScreen extends StatelessWidget {
             actions: [
               CupertinoActionSheetAction(
                 // onPressed: () => imageGallerypicker(ImageSource.camera, context),
-                onPressed: () {},
+                onPressed: () async {
+                  final Uri url = index == 0
+                      ? Uri.parse('tel:+237 696 363 161')
+                      : index == 2
+                          ? Uri.parse('https://wa.me/237696363161')
+                          : Uri.parse('sms : +237 696 363 161');
+                  if (await canLaunchUrl(url)) {
+                    await launchUrl(url);
+                  } else {
+                    throw 'Could not launch $url';
+                  }
+                },
                 child: Text(
                   '696363161 (Simon DEKOKEBE)',
                   textAlign: TextAlign.left,
@@ -117,7 +129,18 @@ class ContactScreen extends StatelessWidget {
               ),
               CupertinoActionSheetAction(
                 // onPressed: () => imageGallerypicker(ImageSource.camera, context),
-                onPressed: () {},
+                onPressed: () async{
+                  final Uri url = index == 0
+                      ? Uri.parse('tel:+237 699 398 876')
+                      : index == 2
+                          ? Uri.parse('https://wa.me/237699398876')
+                          : Uri.parse('sms : +237 699 398 876');
+                  if (await canLaunchUrl(url)) {
+                    await launchUrl(url);
+                  } else {
+                    throw 'Could not launch $url';
+                  }
+                },
                 child: Text(
                   '699398876 (Nestor WABADANG)',
                   textAlign: TextAlign.left,
@@ -130,7 +153,18 @@ class ContactScreen extends StatelessWidget {
               ),
               CupertinoActionSheetAction(
                 // onPressed: () => imageGallerypicker(ImageSource.camera, context),
-                onPressed: () {},
+                onPressed: () async{
+                  final Uri url = index == 0
+                      ? Uri.parse('tel:+237 696 858 395')
+                      : index == 2
+                          ? Uri.parse('https://wa.me/237696858395')
+                          : Uri.parse('sms : +237 696 858 395');
+                  if (await canLaunchUrl(url)) {
+                    await launchUrl(url);
+                  } else {
+                    throw 'Could not launch $url';
+                  }
+                },
                 child: Text(
                   '696858395 (Christophe TCHIKOUA)',
                   textAlign: TextAlign.left,
