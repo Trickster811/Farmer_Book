@@ -78,6 +78,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.1.0"
+  call_with_whatsapp:
+    dependency: "direct main"
+    description:
+      name: call_with_whatsapp
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.0.1"
   characters:
     dependency: transitive
     description:

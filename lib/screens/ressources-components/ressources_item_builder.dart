@@ -1,3 +1,4 @@
+import 'package:agri_facile_fulfulde/screens/ressources_component_page_viewer/page_viewer.dart';
 import 'package:flutter/material.dart';
 
 class RessourcesItemBuilderScreen extends StatelessWidget {

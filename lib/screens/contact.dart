@@ -5,10 +5,12 @@ import 'package:url_launcher/url_launcher.dart';
 
 class ContactScreen extends StatelessWidget {
   final List<String> audiosMessage = [
-    'assets/audios/appeler.opus',
-    'assets/audios/whatsapp.opus',
-    'assets/audios/sms.opus',
+    'assets/audios/appeler.mp3',
+    'assets/audios/whatsapp.mp3',
+    'assets/audios/sms.mp3',
   ];
+  final String message =
+      "Salut, je suis un utilisateur de votre application Agri_Facile_Fulfulde et je souhaite entrer en contact avec un conseiller.";
   @override
   Widget build(BuildContext context) {
     final appBar = AppBar(
@@ -108,17 +110,21 @@ class ContactScreen extends StatelessWidget {
                 onPressed: () async {
                   final Uri url = index == 0
                       ? Uri.parse('tel:+237 696 363 161')
-                      : index == 2
-                          ? Uri.parse('https://wa.me/237696363161')
-                          : Uri.parse('sms : +237 696 363 161');
+                      : index == 1
+                          ? Uri.parse(
+                              'https://wa.me/237696363161?text=${Uri.parse(message)}')
+                          : Uri.parse('sms:+237 696 363 161');
                   if (await canLaunchUrl(url)) {
-                    await launchUrl(url);
+                    await launchUrl(
+                      url,
+                      mode: LaunchMode.externalApplication,
+                    );
                   } else {
                     throw 'Could not launch $url';
                   }
                 },
                 child: Text(
-                  '696363161 (Simon DEKOKEBE)',
+                  '(237) 696363161 (Simon DEKOKEBE)',
                   textAlign: TextAlign.left,
                   style: TextStyle(
                     fontSize: 16,
@@ -129,20 +135,24 @@ class ContactScreen extends StatelessWidget {
               ),
               CupertinoActionSheetAction(
                 // onPressed: () => imageGallerypicker(ImageSource.camera, context),
-                onPressed: () async{
+                onPressed: () async {
                   final Uri url = index == 0
                       ? Uri.parse('tel:+237 699 398 876')
-                      : index == 2
-                          ? Uri.parse('https://wa.me/237699398876')
-                          : Uri.parse('sms : +237 699 398 876');
+                      : index == 1
+                          ? Uri.parse(
+                              'https://wa.me/237699398876?text=${Uri.parse(message)}')
+                          : Uri.parse('sms:+237 699 398 876');
                   if (await canLaunchUrl(url)) {
-                    await launchUrl(url);
+                    await launchUrl(
+                      url,
+                      mode: LaunchMode.externalApplication,
+                    );
                   } else {
                     throw 'Could not launch $url';
                   }
                 },
                 child: Text(
-                  '699398876 (Nestor WABADANG)',
+                  '(237) 699398876 (Nestor WABADANG)',
                   textAlign: TextAlign.left,
                   style: TextStyle(
                     fontSize: 16,
@@ -153,20 +163,24 @@ class ContactScreen extends StatelessWidget {
               ),
               CupertinoActionSheetAction(
                 // onPressed: () => imageGallerypicker(ImageSource.camera, context),
-                onPressed: () async{
+                onPressed: () async {
                   final Uri url = index == 0
                       ? Uri.parse('tel:+237 696 858 395')
-                      : index == 2
-                          ? Uri.parse('https://wa.me/237696858395')
-                          : Uri.parse('sms : +237 696 858 395');
+                      : index == 1
+                          ? Uri.parse(
+                              "https://wa.me/237696858395?text=${Uri.parse(message)}")
+                          : Uri.parse('sms:+237 696 858 395');
                   if (await canLaunchUrl(url)) {
-                    await launchUrl(url);
+                    await launchUrl(
+                      url,
+                      mode: LaunchMode.externalApplication,
+                    );
                   } else {
                     throw 'Could not launch $url';
                   }
                 },
                 child: Text(
-                  '696858395 (Christophe TCHIKOUA)',
+                  '(237) 696858395 (Christophe TCHIKOUA)',
                   textAlign: TextAlign.left,
                   style: TextStyle(
                     fontSize: 16,

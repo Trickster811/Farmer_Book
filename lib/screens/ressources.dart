@@ -1,4 +1,6 @@
+import 'package:agri_facile_fulfulde/screens/ressources-components/ressources_item_builder.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class RessourcesScreen extends StatelessWidget {
   @override

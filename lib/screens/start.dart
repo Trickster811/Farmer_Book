@@ -3,6 +3,7 @@ import 'package:agri_facile_fulfulde/screens/contact.dart';
 import 'package:agri_facile_fulfulde/screens/quizz.dart';
 import 'package:agri_facile_fulfulde/screens/ressources.dart';
 import 'package:agri_facile_fulfulde/screens/suivi.dart';
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 
 class MyHomePage extends StatelessWidget {
@@ -14,11 +15,11 @@ class MyHomePage extends StatelessWidget {
     ContactScreen(),
   ];
   final List<String> audiosMessage = [
-    'assets/audios/ressources_educatives.opus',
-    'assets/audios/suivi_activites.opus',
-    'assets/audios/conseil.opus',
-    'assets/audios/quizz.opus',
-    'assets/audios/conseiller.opus',
+    'assets/audios/ressources_educatives.mp3',
+    'assets/audios/suivi_activites.mp3',
+    'assets/audios/conseil.mp3',
+    'assets/audios/quizz.mp3',
+    'assets/audios/conseiller.mp3',
   ];
   @override
   Widget build(BuildContext context) {
