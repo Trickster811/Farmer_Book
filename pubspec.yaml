@@ -59,7 +59,7 @@ dev_dependencies:
 flutter_icons:
   android: "launcher_icon"
   ios: true
-  image_path: assets/images/agri_logo.jpg
+  image_path: assets/images/agri_logo.png
 
 
 # The following section is specific to Flutter packages.

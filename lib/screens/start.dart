@@ -15,11 +15,11 @@ class MyHomePage extends StatelessWidget {
     ContactScreen(),
   ];
   final List<String> audiosMessage = [
-    'assets/audios/ressources_educatives.mp3',
-    'assets/audios/suivi_activites.mp3',
-    'assets/audios/conseil.mp3',
-    'assets/audios/quizz.mp3',
-    'assets/audios/conseiller.mp3',
+    'audios/ressources_educatives.mp3',
+    'audios/suivi_activites.mp3',
+    'audios/conseil.mp3',
+    'audios/quizz.mp3',
+    'audios/conseiller.mp3',
   ];
   @override
   Widget build(BuildContext context) {

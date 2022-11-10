@@ -5,9 +5,9 @@ import 'package:url_launcher/url_launcher.dart';
 
 class ContactScreen extends StatelessWidget {
   final List<String> audiosMessage = [
-    'assets/audios/appeler.mp3',
-    'assets/audios/whatsapp.mp3',
-    'assets/audios/sms.mp3',
+    'audios/appeler.mp3',
+    'audios/whatsapp.mp3',
+    'audios/sms.mp3',
   ];
   final String message =
       "Salut, je suis un utilisateur de votre application Agri_Facile_Fulfulde et je souhaite entrer en contact avec un conseiller.";
